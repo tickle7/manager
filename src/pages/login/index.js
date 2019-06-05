@@ -1,10 +1,10 @@
 import React from 'react'
-export default class App extends React.Component {
+export default class Login extends React.Component {
 
     render() {
         return (
             <div>
-                {this.props.children}
+                this is Login page.
             </div>
         );
     }
