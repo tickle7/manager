@@ -25,7 +25,9 @@ export default class Axios{
                 timeout:5000,
                 params:(options.data && options.data.params) || '' ,
             }).then((response) =>{
+                // eslint-disable-next-line
                 if(response.status == '200'){
+                    // eslint-disable-next-line
                     if(response.data.code == 0){
                         resolve(response.data)
                     }else{

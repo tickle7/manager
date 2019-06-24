@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Table,Button, Modal, message, Badge } from 'antd';
 import axios from './../../../axios/index';
-import Utils from './../../../utils/utils';
 
 export default class High extends React.Component{
     constructor() {
@@ -20,7 +19,6 @@ export default class High extends React.Component{
         page:1
     }
     request() {
-        let _this = this;
         axios.ajax({
             url: '/table/list',
             data: {
@@ -29,6 +27,7 @@ export default class High extends React.Component{
                 }
             }
         }).then((res) => {
+            // eslint-disable-next-line
             res.result.list.map((item, index) => {
                 item.key = index
             })
@@ -75,6 +74,7 @@ export default class High extends React.Component{
                 title: '性别',
                 dataIndex: 'sex',
                 render(sex) {
+                    // eslint-disable-next-line
                     return sex == 0 ? '女' : '男'
                 },
                 width:80

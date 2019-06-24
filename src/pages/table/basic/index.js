@@ -29,6 +29,7 @@ export default class Basic extends React.Component {
                 }
             }
         }).then((res) => {
+            // eslint-disable-next-line
             res.result.list.map((item, index) => {
                 item.key = index
             })
@@ -55,6 +56,7 @@ export default class Basic extends React.Component {
     handelDel = ()=>{
         let items = this.state.selectedRows;
         let ids = [];
+        // eslint-disable-next-line
         items.map((item) =>{
             ids.push(item.id)
         })
@@ -82,6 +84,7 @@ export default class Basic extends React.Component {
                 title: '性别',
                 dataIndex: 'sex',
                 render(sex) {
+                    // eslint-disable-next-line
                     return sex == 0 ? '女' : '男'
                 }
             },
